@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<!--
+ JSINQ, JavaScript integrated query
+ Copyright (c) 2010 Kai Jäger. Some rights reserved.
+ 
+ Use of this source code is governed by an MIT-style license that can be
+ found in the license.txt file. 
+-->
+
+<head>
+	<title>JSINQ fuzz test file</title>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	
+	<link rel="stylesheet" href="jsunittest/unittest.css" type="text/css" />
+	
+	<script type="text/javascript" src="../source/jsinq.js"></script>	
+	<script type="text/javascript" src="../source/jsinq-query.js"></script>	
+</head>
+<body>
+	<div id="content">
+		<div id="header">
+			<h1>JSINQ fuzz test file</h1>
+			<p>
+				This file tests <strong>jsinq-query.js</strong>.
+			</p>
+		</div>
+		<div>			
+			<table>
+				<tbody>
+					<tr>
+						<td style="background: #cfc">Successes:</td>
+						<td style="background: #cfc" id="successes">0</td>
+					</tr>
+					<tr>
+						<td style="background: #fcc">Failures:</td>
+						<td style="background: #fcc" id="failures">0</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div id="testlog"></div>
+	</div>
+	<script type="text/javascript" src="jsinq-query-fuzz-test.js"></script>	
+	<script type="text/javascript">
+		runFuzzTest();
+	</script>	
+</body>
+</html>

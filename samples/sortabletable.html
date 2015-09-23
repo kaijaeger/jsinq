@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<!--
+ JSINQ, JavaScript integrated query
+ Copyright (c) 2010 Kai Jäger. Some rights reserved.
+ 
+ Use of this source code is governed by an MIT-style license that can be
+ found in the license.txt file. 
+-->
+
+<head>
+	<title>JSINQ example</title>	
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+</head>
+<body>
+	<h1>JSINQ &quot;sortable table&quot; example</h1>
+	<p>
+		The source code for this example can be found in the file 
+		<em>sortabletable.js</em>.
+	</p>
+	<p>
+		This example demonstrates, how you can use <tt>jsinq.Query</tt>
+		many times without ever having to recompile it. It defines a generic
+		query that sorts the table below by a specific column. The column by
+		which to sort the table is specified as a placeholder which is then
+		replaced whenever an actual column header is clicked. <strong>To keep
+		things simple, this example only ever sorts in ascending order, i.e. 
+		you cannot click a column header twice to change the ordering 
+		direction.</strong>
+	</p>
+	
+	<h2>Click the column headers to sort the table</h2>
+	<table border="1">
+		<thead id="table-head">
+			<tr>
+				<td>firstname</td>
+				<td>lastname</td>
+				<td>gender</td>
+				<td>date of birth</td>
+			</tr>
+		</thead>
+		<tbody id="table-body">
+			<!-- Note that this example uses absolute indices into the 
+			childNodes list of the table rows below. You therefore cannot
+			place additional whitespace between the table elements.
+			This obviously isn't pretty and it is highly recommended that you
+			use a JavaScript framework instead of twiddling with the DOM
+			directly. This example does not use a JavaScript framework, only
+			to avoid external dependencies. -->
+			<tr><td>John</td><td>Smith</td><td>male</td><td>1977-11-05</td></tr>
+			<tr><td>Jessica</td><td>Johnson</td><td>female</td><td>1943-06-23</td></tr>
+			<tr><td>Michael</td><td>Williams</td><td>male</td><td>1989-10-09</td></tr>
+			<tr><td>Amber</td><td>Davis</td><td>female</td><td>1983-11-05</td></tr>
+			<tr><td>Jonathan</td><td>Robinson</td><td>male</td><td>1998-12-23</td></tr>
+			<tr><td>Angela</td><td>Hill</td><td>female</td><td>1966-01-03</td></tr>
+			<tr><td>Richard</td><td>Bailey</td><td>male</td><td>1952-10-09</td></tr>
+			<tr><td>Shannon</td><td>Brooks</td><td>female</td><td>1970-02-28</td></tr>
+			<tr><td>Samuel</td><td>Patterson</td><td>male</td><td>1944-01-19</td></tr>
+			<tr><td>Taylor</td><td>Griffin</td><td>female</td><td>1924-05-07</td></tr>
+		</tbody>
+	</table>	
+	
+	<!-- Please note that this example uses the un-minified version of the
+	jsinq library for debugging purposes. It is recommended that you use the
+	minified version found in the build folder for production use. -->
+	<script type="text/javascript" src="../source/jsinq.js">	
+	</script>	
+	<script type="text/javascript" src="../source/jsinq-query.js"></script>
+	<script type="text/javascript" src="sortabletable.js"></script>
+</body>
+</html>
